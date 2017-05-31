@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/31/2017 11:53:00
+-- Date Created: 05/31/2017 12:07:41
 -- Generated from EDMX file: C:\Users\Will\Documents\ProjetoWebForms\ProjetoWF\ProjetoWF\Models\BaseDados.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,20 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_CategoriaJogo]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Jogos] DROP CONSTRAINT [FK_CategoriaJogo];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Categorias]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Categorias];
+GO
+IF OBJECT_ID(N'[dbo].[Jogos]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Jogos];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -30,7 +39,8 @@ GO
 -- Creating table 'Categorias'
 CREATE TABLE [dbo].[Categorias] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Nome] nvarchar(25)  NOT NULL
+    [Nome] nvarchar(25)  NOT NULL,
+    [Ativo] bit  NULL
 );
 GO
 
@@ -39,7 +49,8 @@ CREATE TABLE [dbo].[Jogos] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Nome] nvarchar(25)  NOT NULL,
     [Descricao] nvarchar(max)  NOT NULL,
-    [CategoriaId] int  NOT NULL
+    [CategoriaId] int  NOT NULL,
+    [Ativo] bit  NULL
 );
 GO
 
