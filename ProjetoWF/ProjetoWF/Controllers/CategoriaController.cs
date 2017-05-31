@@ -9,7 +9,7 @@ namespace ProjetoWF.Controllers
     public class CategoriaController
     {
         static protected BaseDadosContainer context = new BaseDadosContainer();
-        public static void Create(Categoria C)
+        public static void Add(Categoria C)
         {
             if (C!=null)
             {
@@ -27,7 +27,7 @@ namespace ProjetoWF.Controllers
             context.SaveChanges();
             
         }
-        public static void Update(Categoria C)
+        public static void Alter(Categoria C)
         {
             context.Entry(C).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
