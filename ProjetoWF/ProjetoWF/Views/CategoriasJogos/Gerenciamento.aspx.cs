@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoWF.Controllers;
+using ProjetoWF.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,14 @@ namespace ProjetoWF.Views.CategoriasJogos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
 
+        protected void btnCadCat_Click(object sender, EventArgs e)
+        {
+            var Cat = new Categoria();
+            Cat.Nome = txtNomeCat.Text;
+            Cat.Ativo = true;
+            CategoriaController.Add(Cat);
         }
     }
 }

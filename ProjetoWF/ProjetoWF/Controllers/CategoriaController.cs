@@ -14,6 +14,7 @@ namespace ProjetoWF.Controllers
             if (C!=null)
             {
                 context.Categorias.Add(C);
+                context.SaveChanges();
             }
         }
         public static List<Categoria> List()
@@ -31,6 +32,10 @@ namespace ProjetoWF.Controllers
         {
             context.Entry(C).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
+        }
+        public static Categoria Find(Categoria C)
+        {
+            return context.Categorias.FirstOrDefault(x=>x.Id==C.Id);
         }
     }
 }
