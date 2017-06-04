@@ -214,6 +214,7 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\CategoriasJogos\CategoriasEditar.aspx" />
     <Content Include="Views\CategoriasJogos\Gerenciamento.aspx" />
+    <Content Include="Views\CategoriasJogos\JogosEditar.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -315,6 +316,13 @@
     </Compile>
     <Compile Include="Views\CategoriasJogos\Gerenciamento.aspx.designer.cs">
       <DependentUpon>Gerenciamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CategoriasJogos\JogosEditar.aspx.cs">
+      <DependentUpon>JogosEditar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CategoriasJogos\JogosEditar.aspx.designer.cs">
+      <DependentUpon>JogosEditar.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

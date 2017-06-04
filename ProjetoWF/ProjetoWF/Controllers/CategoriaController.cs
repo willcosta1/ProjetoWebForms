@@ -37,5 +37,9 @@ namespace ProjetoWF.Controllers
         {
             return context.Categorias.FirstOrDefault(x=>x.Id==C.Id);
         }
+        public static Categoria FindPerName(Categoria C)
+        {
+            return context.Categorias.FirstOrDefault(x => x.Nome == C.Nome);
+        }
     }
 }

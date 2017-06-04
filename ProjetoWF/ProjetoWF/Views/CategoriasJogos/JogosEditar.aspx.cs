@@ -9,11 +9,11 @@ using System.Web.UI.WebControls;
 
 namespace ProjetoWF.Views.CategoriasJogos
 {
-    public partial class CategoriasEditar : System.Web.UI.Page
+    public partial class JogosEditar : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
                 this.popCampos(int.Parse(Request.QueryString["id"]));
         }
 
@@ -23,25 +23,33 @@ namespace ProjetoWF.Views.CategoriasJogos
         }
         private void popCampos(int id)
         {
-            var Cat = new Categoria();
-            Cat.Id = id;
-            Cat=CategoriaController.Find(Cat);
-            txtNome.Text = Cat.Nome;
+            var Jogo = new Jogo();
+            Jogo.Id = id;
+            Jogo=JogoController.Find(Jogo);
+            txtNome.Text = Jogo.Nome;
+            txtDesc.Text = Jogo.Descricao;
+            dwlCat.Text = Jogo.Categoria.Nome;
         }
         private void Atualizar(int id)
         {
+            var j = new Jogo();
+            j.Id = id;
+            j=JogoController.Find(j);
+            j.Nome = txtNome.Text;
+            j.Descricao = txtDesc.Text;
             var Cat = new Categoria();
-            Cat.Id = id;
-            Cat=CategoriaController.Find(Cat);
-            Cat.Nome = txtNome.Text;
+            Cat.Nome = dwlCat.Text;
+            Cat=CategoriaController.FindPerName(Cat);
+            j.Categoria = Cat;
             if (chkAtivo.Checked == false)
             {
-                Cat.Ativo = false;
-            }else
-            {
-                Cat.Ativo = true;
+                j.Ativo = false;
             }
-            CategoriaController.Alter(Cat);
+            else
+            {
+                j.Ativo = true;
+            }
+            JogoController.Alter(j);
             Response.Redirect("Gerenciamento.aspx");
         }
     }

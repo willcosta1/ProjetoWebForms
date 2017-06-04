@@ -10,7 +10,7 @@
 namespace ProjetoWF.Views.CategoriasJogos {
     
     
-    public partial class CategoriasEditar {
+    public partial class JogosEditar {
         
         /// <summary>
         /// lblNome control.
@@ -29,6 +29,51 @@ namespace ProjetoWF.Views.CategoriasJogos {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNome;
+        
+        /// <summary>
+        /// lblDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDesc;
+        
+        /// <summary>
+        /// txtDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDesc;
+        
+        /// <summary>
+        /// lblCat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCat;
+        
+        /// <summary>
+        /// dwlCat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dwlCat;
+        
+        /// <summary>
+        /// dscCategorias control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dscCategorias;
         
         /// <summary>
         /// lblAtivo control.

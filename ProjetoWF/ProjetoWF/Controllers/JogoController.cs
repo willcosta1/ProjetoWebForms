@@ -32,5 +32,9 @@ namespace ProjetoWF.Controllers
             context.Entry(J).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
         }
+        public static Jogo Find(Jogo J)
+        {
+            return context.Jogos.FirstOrDefault(x=>x.Id==J.Id);
+        }
     }
 }

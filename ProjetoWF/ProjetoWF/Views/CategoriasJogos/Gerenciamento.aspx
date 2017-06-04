@@ -33,7 +33,10 @@
     </asp:GridView>
     <asp:SqlDataSource ID="dscJogos" runat="server" ConnectionString="<%$ ConnectionStrings:BancoCatalogoConnectionString %>" SelectCommand="SELECT * FROM [Jogos]"></asp:SqlDataSource>
     <h2>Cadastrar Jogo</h2>
-    <asp:Label ID="Label1" runat="server" Text="Nome"></asp:Label>
-    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-    <asp:Button ID="Button1" runat="server" Text="Cadastrar" OnClick="btnCadCat_Click" />
+    <asp:Label ID="lblNome" runat="server" Text="Nome"></asp:Label>
+    <asp:TextBox ID="txtNomeJogo" runat="server"></asp:TextBox>
+    <asp:Label ID="lblDesc" runat="server" Text="Descrição"></asp:Label>
+    <asp:TextBox ID="txtDescJogo" runat="server"></asp:TextBox>
+    <asp:DropDownList ID="dwlCat" runat="server" DataSourceID="dscCategorias" DataTextField="Nome"></asp:DropDownList>
+    <asp:Button ID="btnCadJogo" runat="server" Text="Cadastrar" OnClick="btnCadJogo_Click"/>
 </asp:Content>
