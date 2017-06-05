@@ -67,15 +67,6 @@ namespace ProjetoWF.Views.CategoriasJogos {
         protected global::System.Web.UI.WebControls.DropDownList dwlCat;
         
         /// <summary>
-        /// dscCategorias control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dscCategorias;
-        
-        /// <summary>
         /// lblAtivo control.
         /// </summary>
         /// <remarks>

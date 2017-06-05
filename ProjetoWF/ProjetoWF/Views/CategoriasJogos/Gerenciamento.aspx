@@ -5,15 +5,12 @@
     <h1>Cadastros</h1>
     <h2>Categorias</h2>
 
-    <asp:GridView ID="gvwCategorias" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="dscCategorias">
+    <asp:GridView ID="gvwCategorias" runat="server" AutoGenerateColumns="False">
         <Columns>
-            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-            <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
-            <asp:CheckBoxField DataField="Ativo" HeaderText="Ativo" SortExpression="Ativo" />
+            <asp:BoundField DataField="Nome" HeaderText="Nome" />
             <asp:HyperLinkField DataNavigateUrlFormatString="CategoriasEditar.aspx?id={0}" Text="Editar" DataNavigateUrlFields="Id" />
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="dscCategorias" runat="server" ConnectionString="<%$ ConnectionStrings:BancoCatalogoConnectionString %>" SelectCommand="SELECT * FROM [Categorias]"></asp:SqlDataSource>
     <h2>Cadastrar categoria</h2>
     <asp:Label ID="lblNomeCat" runat="server" Text="Nome"></asp:Label>
     <asp:TextBox ID="txtNomeCat" runat="server"></asp:TextBox>
@@ -21,22 +18,19 @@
 
     <h2>Jogos</h2>
 
-    <asp:GridView ID="gvwJogos" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="dscJogos">
+    <asp:GridView ID="gvwJogos" runat="server" AutoGenerateColumns="False">
         <Columns>
-            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-            <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
-            <asp:BoundField DataField="Descricao" HeaderText="Descricao" SortExpression="Descricao" />
-            <asp:BoundField DataField="CategoriaId" HeaderText="CategoriaId" SortExpression="CategoriaId" />
-            <asp:CheckBoxField DataField="Ativo" HeaderText="Ativo" SortExpression="Ativo" />
-            <asp:HyperLinkField DataNavigateUrlFormatString="JogosEditar.aspx?id={0}" Text="Editar" DataNavigateUrlFields ="Id" />
+            <asp:BoundField DataField="Nome" HeaderText="Nome" />
+            <asp:BoundField DataField="Descricao" HeaderText="Descrição" />
+            <asp:BoundField DataField="Categoria.Nome" HeaderText="Categoria" />
+            <asp:HyperLinkField DataNavigateUrlFormatString="JogosEditar.aspx?id={0}" Text="Editar" DataNavigateUrlFields="Id" />
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="dscJogos" runat="server" ConnectionString="<%$ ConnectionStrings:BancoCatalogoConnectionString %>" SelectCommand="SELECT * FROM [Jogos]"></asp:SqlDataSource>
     <h2>Cadastrar Jogo</h2>
     <asp:Label ID="lblNome" runat="server" Text="Nome"></asp:Label>
     <asp:TextBox ID="txtNomeJogo" runat="server"></asp:TextBox>
     <asp:Label ID="lblDesc" runat="server" Text="Descrição"></asp:Label>
     <asp:TextBox ID="txtDescJogo" runat="server"></asp:TextBox>
-    <asp:DropDownList ID="dwlCat" runat="server" DataSourceID="dscCategorias" DataTextField="Nome"></asp:DropDownList>
+    <asp:DropDownList ID="dwlCat" runat="server" DataTextField="Nome"></asp:DropDownList>
     <asp:Button ID="btnCadJogo" runat="server" Text="Cadastrar" OnClick="btnCadJogo_Click"/>
 </asp:Content>

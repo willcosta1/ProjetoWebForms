@@ -143,8 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Categorias\" />
-    <Folder Include="Views\Jogos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
@@ -245,6 +243,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\JogoController.cs" />
     <Compile Include="Default.aspx.cs">

@@ -6,9 +6,10 @@ using System.Web;
 
 namespace ProjetoWF.Controllers
 {
-    public class CategoriaController
+    public class CategoriaController :BaseController
     {
-        static protected BaseDadosContainer context = new BaseDadosContainer();
+        //protected static BaseDadosContainer context = new BaseDadosContainer();
+        //protected static BaseController context = new BaseController();
         public static void Add(Categoria C)
         {
             if (C!=null)
@@ -19,7 +20,7 @@ namespace ProjetoWF.Controllers
         }
         public static List<Categoria> List()
         {
-            return context.Categorias.OrderBy(c => c.Nome).ToList();
+            return context.Categorias.Where(c=>c.Ativo==true).OrderBy(x=>x.Nome).ToList();
         }
         public static void Remove(Categoria C)
         {

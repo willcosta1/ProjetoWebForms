@@ -14,7 +14,13 @@ namespace ProjetoWF.Views.CategoriasJogos
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
+            {
                 this.popCampos(int.Parse(Request.QueryString["id"]));
+                List<Categoria> lista = CategoriaController.List();
+                dwlCat.DataSource = lista.ToList();
+                dwlCat.DataBind();
+            }
+            
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)

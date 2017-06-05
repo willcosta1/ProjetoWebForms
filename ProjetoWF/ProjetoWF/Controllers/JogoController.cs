@@ -6,9 +6,9 @@ using System.Web;
 
 namespace ProjetoWF.Controllers
 {
-    public class JogoController
+    public class JogoController : BaseController
     {
-        static protected BaseDadosContainer context = new BaseDadosContainer();
+        //protected static BaseDadosContainer context = new BaseDadosContainer();
         public static void Add(Jogo J)
         {
             if (J!=null)
@@ -19,7 +19,7 @@ namespace ProjetoWF.Controllers
         }
         public static List<Jogo> List()
         {
-            return context.Jogos.OrderBy(j => j.Nome).ToList();
+            return context.Jogos.Where(c=>c.Ativo==true).OrderBy(j => j.Nome).ToList();
         }
         public static void Remove(Jogo J)
         {

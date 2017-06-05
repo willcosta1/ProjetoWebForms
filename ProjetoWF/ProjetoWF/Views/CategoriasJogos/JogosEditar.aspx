@@ -5,8 +5,7 @@
     <asp:Label ID="lblDesc" runat="server" Text="Descrição"></asp:Label>
     <asp:TextBox ID="txtDesc" runat="server"></asp:TextBox>
     <asp:Label ID="lblCat" runat="server" Text="Categoria"></asp:Label>
-    <asp:DropDownList ID="dwlCat" runat="server" DataSourceID="dscCategorias" DataTextField="Nome"></asp:DropDownList>
-    <asp:SqlDataSource ID="dscCategorias" runat="server" ConnectionString="<%$ ConnectionStrings:BancoCatalogoConnectionString %>" SelectCommand="SELECT * FROM [Categorias]"></asp:SqlDataSource>
+    <asp:DropDownList ID="dwlCat" runat="server" DataTextField="Nome"></asp:DropDownList>
     <asp:Label ID="lblAtivo" runat="server" Text="Ativo"></asp:Label>
     <asp:CheckBox ID="chkAtivo" runat="server" />
     <asp:Button ID="btnUpdate" runat="server" Text="Atualizar" OnClick="btnUpdate_Click" />

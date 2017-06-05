@@ -22,15 +22,6 @@ namespace ProjetoWF.Views.CategoriasJogos {
         protected global::System.Web.UI.WebControls.GridView gvwCategorias;
         
         /// <summary>
-        /// dscCategorias control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dscCategorias;
-        
-        /// <summary>
         /// lblNomeCat control.
         /// </summary>
         /// <remarks>
@@ -65,15 +56,6 @@ namespace ProjetoWF.Views.CategoriasJogos {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvwJogos;
-        
-        /// <summary>
-        /// dscJogos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dscJogos;
         
         /// <summary>
         /// lblNome control.

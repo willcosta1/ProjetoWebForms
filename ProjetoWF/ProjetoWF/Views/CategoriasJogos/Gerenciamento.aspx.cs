@@ -13,6 +13,18 @@ namespace ProjetoWF.Views.CategoriasJogos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            List<Categoria> lista = CategoriaController.List();
+            gvwCategorias.DataSource = lista.ToList();
+            gvwCategorias.DataBind();
+
+            List<Jogo> lista2 = JogoController.List();
+            gvwJogos.DataSource = lista2.ToList();
+            gvwJogos.DataBind();
+            if (!IsPostBack)
+            {
+                dwlCat.DataSource = lista.ToList();
+                dwlCat.DataBind();
+            }
         }
 
         protected void btnCadCat_Click(object sender, EventArgs e)
