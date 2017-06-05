@@ -33,7 +33,6 @@ namespace ProjetoWF.Views.CategoriasJogos
             C.Nome = dwlCat.Text;
             C = CategoriaController.FindPerName(C);
             Jogo.Categoria = C;
-            Jogo.CategoriaId = C.Id;
             Jogo.Ativo = true;
             JogoController.Add(Jogo);
             Response.Redirect("Gerenciamento.aspx");
