@@ -35,6 +35,7 @@ namespace ProjetoWF.Views.CategoriasJogos
             txtNome.Text = Jogo.Nome;
             txtDesc.Text = Jogo.Descricao;
             dwlCat.Text = Jogo.Categoria.Nome;
+            chkAtivo.Checked = true;
         }
         private void Atualizar(int id)
         {

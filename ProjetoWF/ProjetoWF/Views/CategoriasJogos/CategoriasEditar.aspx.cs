@@ -27,6 +27,7 @@ namespace ProjetoWF.Views.CategoriasJogos
             Cat.Id = id;
             Cat=CategoriaController.Find(Cat);
             txtNome.Text = Cat.Nome;
+            chkAtivo.Checked=true;
         }
         private void Atualizar(int id)
         {
