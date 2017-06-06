@@ -43,7 +43,7 @@ namespace ProjetoWF.Views.CategoriasJogos
                 Cat.Ativo = true;
             }
             CategoriaController.Alter(Cat);
-            Response.Redirect("Gerenciamento.aspx");
+            Response.Redirect("~/Views/CategoriasJogos/Gerenciamento.aspx");
         }
     }
 }

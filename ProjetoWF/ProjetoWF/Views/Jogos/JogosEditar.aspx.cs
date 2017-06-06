@@ -57,7 +57,7 @@ namespace ProjetoWF.Views.CategoriasJogos
                 j.Ativo = true;
             }
             JogoController.Alter(j);
-            Response.Redirect("Gerenciamento.aspx");
+            Response.Redirect("~/Views/CategoriasJogos/Gerenciamento.aspx");
         }
     }
 }

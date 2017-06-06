@@ -210,9 +210,9 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Views\CategoriasJogos\CategoriasEditar.aspx" />
+    <Content Include="Views\Categorias\CategoriasEditar.aspx" />
     <Content Include="Views\CategoriasJogos\Gerenciamento.aspx" />
-    <Content Include="Views\CategoriasJogos\JogosEditar.aspx" />
+    <Content Include="Views\Jogos\JogosEditar.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -302,11 +302,11 @@
     <Compile Include="Views\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\CategoriasJogos\CategoriasEditar.aspx.cs">
+    <Compile Include="Views\Categorias\CategoriasEditar.aspx.cs">
       <DependentUpon>CategoriasEditar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\CategoriasJogos\CategoriasEditar.aspx.designer.cs">
+    <Compile Include="Views\Categorias\CategoriasEditar.aspx.designer.cs">
       <DependentUpon>CategoriasEditar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\CategoriasJogos\Gerenciamento.aspx.cs">
@@ -316,11 +316,11 @@
     <Compile Include="Views\CategoriasJogos\Gerenciamento.aspx.designer.cs">
       <DependentUpon>Gerenciamento.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\CategoriasJogos\JogosEditar.aspx.cs">
+    <Compile Include="Views\Jogos\JogosEditar.aspx.cs">
       <DependentUpon>JogosEditar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\CategoriasJogos\JogosEditar.aspx.designer.cs">
+    <Compile Include="Views\Jogos\JogosEditar.aspx.designer.cs">
       <DependentUpon>JogosEditar.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -8,7 +8,7 @@
     <asp:GridView ID="gvwCategorias" runat="server" AutoGenerateColumns="False">
         <Columns>
             <asp:BoundField DataField="Nome" HeaderText="Nome" />
-            <asp:HyperLinkField DataNavigateUrlFormatString="CategoriasEditar.aspx?id={0}" Text="Editar" DataNavigateUrlFields="Id" />
+            <asp:HyperLinkField DataNavigateUrlFormatString="~/Views/Categorias/CategoriasEditar.aspx?id={0}" Text="Editar" DataNavigateUrlFields="Id" />
         </Columns>
     </asp:GridView>
     <h2>Cadastrar categoria</h2>
@@ -23,7 +23,7 @@
             <asp:BoundField DataField="Nome" HeaderText="Nome" />
             <asp:BoundField DataField="Descricao" HeaderText="Descrição" />
             <asp:BoundField DataField="Categoria.Nome" HeaderText="Categoria" />
-            <asp:HyperLinkField DataNavigateUrlFormatString="JogosEditar.aspx?id={0}" Text="Editar" DataNavigateUrlFields="Id" />
+            <asp:HyperLinkField DataNavigateUrlFormatString="~/Views/Jogos/JogosEditar.aspx?id={0}" Text="Editar" DataNavigateUrlFields="Id" />
         </Columns>
     </asp:GridView>
     <h2>Cadastrar Jogo</h2>
